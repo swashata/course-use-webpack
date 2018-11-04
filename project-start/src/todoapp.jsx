@@ -128,6 +128,9 @@ class TodoApp extends React.Component {
 	addTodo = () => {
 		// e.preventDefault();
 		this.setState(state => {
+			if (state.input === '') {
+				return null;
+			}
 			const todos = [
 				...state.todos,
 				{
@@ -180,36 +183,41 @@ class TodoApp extends React.Component {
 		const { filter, input } = this.state;
 		const filters = ['all', 'active', 'done'];
 		return (
-			<section className="section" id="todoapp">
+			<section className="section todo-app">
 				<div className="container">
-					<nav className="panel">
-						<h1 className="panel-heading">Todo Application</h1>
+					<nav className="panel todo-app__panel">
+						<h1 className="panel-heading todo-app__title">
+							Todo Application
+						</h1>
 						<div className="panel-block">
 							<form
 								action=""
-								className="todoapp-form"
+								className="todo-app__form"
 								onSubmit={e => {
 									e.preventDefault();
 									this.addTodo();
 								}}
 							>
 								<div className="field">
-									<div className="control has-icons-left">
+									<div className="control todo-app__widget">
 										<input
 											type="text"
-											className="input is-rounded is-medium"
+											className="todo-app__input input is-rounded is-medium"
 											placeholder="type here and enter"
 											value={input}
 											onChange={this.handleInput}
 										/>
-										<span className="icon is-medium is-left">
+										<button
+											type="submit"
+											className="todo-app__submit button is-success is-rounded is-medium"
+										>
 											<SvgPlus />
-										</span>
+										</button>
 									</div>
 								</div>
 							</form>
 						</div>
-						<div className="panel-tabs">
+						<div className="panel-tabs todo-app__tabs">
 							{filters.map(f => (
 								<a
 									key={f}
