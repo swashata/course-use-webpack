@@ -1,0 +1,29 @@
+{
+  "name": "project-start",
+  "version": "1.0.0",
+  "description": "Legecy project",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "npm run build && concurrently --names \"🚧,💅,🔥\" --prefix \"name\" npm:start-js npm:start-sass npm:start-bs",
+    "build": "babel src --out-dir dist --source-map && node-sass --source-map true ./src --output ./dist",
+    "start-js": "babel src --out-dir dist --source-map --watch",
+    "start-sass": "node-sass --source-map true --watch ./src --output ./dist",
+    "start-bs": "browser-sync start --server --files 'dist' 'index.html'"
+  },
+  "author": "Swashata Ghosh (https://swas.io)",
+  "license": "MIT",
+  "devDependencies": {
+    "@babel/cli": "^7.1.2",
+    "@babel/core": "^7.1.2",
+    "@babel/plugin-proposal-class-properties": "^7.1.0",
+    "@babel/preset-env": "^7.1.0",
+    "@babel/preset-react": "^7.0.0",
+    "@wpquark/eslint-config": "^3.0.0",
+    "browser-sync": "^2.26.3",
+    "concurrently": "^4.0.1",
+    "eslint": "^5.8.0",
+    "node-sass": "^4.9.4",
+    "prettier": "^1.14.3"
+  }
+}

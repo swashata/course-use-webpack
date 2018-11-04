@@ -1,0 +1,80 @@
+// Override bulma to beautify some stuff
+#todoapp {
+	margin-top: 2rem;
+	.panel {
+		margin: 0 auto;
+		max-width: 480px;
+		box-shadow: 0 22px 70px 4px rgba(0, 0, 0, 0.56);
+		border-radius: 1rem;
+		padding: 1.5rem;
+		.panel-heading,
+		.panel-block,
+		.panel-tabs {
+			border: 0 none;
+		}
+		.panel-heading {
+			background-color: transparent;
+			font-weight: normal;
+			padding: 0 0.5rem 1rem;
+			text-transform: uppercase;
+		}
+
+		.todoapp-form {
+			width: 100%;
+			.field {
+				.control {
+					flex: 1 1 auto;
+					input {
+						box-shadow: none;
+						border: 0 none;
+						background-color: rgba(0, 0, 0, 0.04);
+						&:hover {
+							background-color: rgba(0, 0, 0, 0.06);
+						}
+						&:active,
+						&:focus {
+							background-color: rgba(0, 0, 0, 0.08);
+						}
+					}
+				}
+			}
+		}
+
+		.panel-tabs {
+			margin-bottom: 1rem;
+		}
+	}
+}
+
+// Main todo app
+.todo-list {
+	& &__status {
+		height: 8px;
+		width: 8px;
+		display: block;
+		background-color: rgb(0, 173, 23);
+		border-radius: 100%;
+		margin: 0 10px 0 4px;
+	}
+
+	& &__block {
+		border-radius: 99999999px;
+		margin-bottom: 0.5rem;
+		&:last-child {
+			margin-bottom: 0;
+		}
+		background-color: #fff;
+		align-items: center;
+		.delete {
+			margin-left: auto;
+		}
+		&--is-done {
+			.todo-list__status {
+				background-color: rgba(0, 0, 0, 0.1);
+			}
+			.todo-list__label {
+				color: rgba(0, 0, 0, 0.3);
+			}
+		}
+	}
+}

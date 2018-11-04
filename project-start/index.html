@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>A Simple Todo Application</title>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.2/css/bulma.css" crossorigin>
+	<link rel="stylesheet" href="./dist/style.css">
+</head>
+<body>
+	<div id="app"></div>
+	<script type="text/javascript">
+		// A hack to make react-spring work
+		process = {
+			env: {
+				NODE_ENV: 'production'
+			}
+		};
+		global = window;
+	</script>
+	<script crossorigin src="https://unpkg.com/uuid-umd@3.3.2/dist/v4.js"></script>
+	<script crossorigin src="https://unpkg.com/classnames@2.2.6/index.js"></script>
+	<script crossorigin src="https://unpkg.com/react@16/umd/react.development.js"></script>
+	<script crossorigin src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
+	<script src="https://unpkg.com/prop-types@15.6/prop-types.min.js"></script>
+	<script crossorigin src="https://unpkg.com/react-spring@6.1.6/dist/web.umd.js"></script>
+	<script crossorigin src="https://unpkg.com/react-spring@6.1.6/dist/addons.umd.js"></script>
+	<script src="./dist/todoapp.js"></script>
+</body>
+</html>
