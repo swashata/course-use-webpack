@@ -1,0 +1,17 @@
+{
+  "name": "project-start",
+  "private": true,
+  "version": "1.0.0",
+  "description": "Legecy project",
+  "main": "index.js",
+  "scripts": {
+    "test": "eslint src/*.js"
+  },
+  "author": "Swashata Ghosh (https://swas.io)",
+  "license": "MIT",
+  "devDependencies": {
+    "@wpquark/eslint-config": "^3.0.0",
+    "eslint": "^5.8.0",
+    "prettier": "^1.14.3"
+  }
+}
