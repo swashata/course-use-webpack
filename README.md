@@ -4,7 +4,7 @@ The goal of this project is to make you familiar with front-end tooling like
 `babel`, `node-sass` and bundler like `webpack`.
 
 <p align="center">
-	<img src="https://raw.githubusercontent.com/swashata/course-use-webpack/todoapp.png" width="733" height="544">
+	<img src="https://raw.githubusercontent.com/swashata/course-use-webpack/master/todoapp.png" width="733" height="544">
 </p>
 
 Here we have a sample project written in react, a very simple [todo app](https://todos.swas.io).
